@@ -1,75 +1,107 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Jakov</title>
 </head>
+
 <body>
   <style>
-    .container{max-width: 892px;}a{text-decoration:none!important;}ion-icon{font-size:40px;}
+    .container {
+      max-width: 892px;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    ion-icon {
+      font-size: 40px;
+    }
+
+    .wrapper {
+      min-height: calc(100vh - 134px);
+    }
+
   </style>
-  <div class="container">
-    <h1 class="mt-lg-5 mt-3 mb-5">Hi. I'm Jakov, a front-end web developer. Welcome and feel free to <a href="#callback">contact me</a>.</h1>
-    <div class="mx-auto mt-5">
-      <h2 id="contacts" class="text-muted">#contacts</h2>
-      <div class="contacts mx-auto">
-        <p class="h4 m-0 p-0">
-          <ion-icon name="call"></ion-icon> <a href="tel:+79166677991">+79166677991</a>
-        </p>
-        <p class="h4 m-0 p-0">
-          <ion-icon name="at"></ion-icon> <a href="mailto:two@badger.one">two@badger.one</a>
-        </p>
-      </div>
-    </div>
-    <div class="mx-auto mt-5">
-      <h2 id="portfolio" class="text-muted">#portfolio</h2>
-      <div class="portfolio">
-        <p class=" h4 mx-auto mt-0 mb-3 px-0">You can find my portfolio as a web developer here. Currently I work in financial sphere. Also have personal and side projects. Mainly it's front-end. But I'm slightly moving toward the <span class=" badge-secondary">back-end</span> side. I have projectlead and marketing background as well. I live in Moscow now. I'm open to new offers.</p>
-        <p class="h4 m-0 p-0">
-          <ion-icon name="logo-github"></ion-icon> <a href="https://github.com/onebadger">github.com</a>
-        </p>
-        <p class="h4 m-0 p-0">
-          <ion-icon name="school"></ion-icon> <a href="https://teamtreehouse.com/yakovbarsukov">teamtreehouse.com</a>
-        </p>
-      </div>
-    </div>
-    <div class="mx-auto mt-5">
-      <h2 id="callback" class="text-muted">#callback</h2>
-      <div>
-        <p class="h4 mx-auto mb-3">Leave your contacts and message me here, I'll get in touch with you soon.</p>
-        <div class="alert alert-danger" role="alert">
-          The form is under constraction. <a href="#" class="alert-link">Use email address to reach me</a>. Sorry for any inconvenience.
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="pt-3 pt-lg-5 mb-5">Hi. I'm Jakov, a front-end web developer. Welcome and feel free to <a href="#callback">contact me</a>.</h1>
+      <div class="mx-auto mt-5">
+        <h2 id="contacts" class="text-muted">#contacts</h2>
+        <div class="contacts mx-auto">
+          <p class="h4 m-0 p-0">
+            <ion-icon name="call"></ion-icon> <a href="tel:+79166677991">+79166677991</a>
+          </p>
+          <p class="h4 m-0 p-0">
+            <ion-icon name="at"></ion-icon> <a href="mailto:two@badger.one">two@badger.one</a>
+          </p>
         </div>
-        <form class="col-sm-7 col-md-5 mx-auto m-0 p-0">
-          <div class="form-group">
-            <input type="text" class="form-control" id="firstNameInput" placeholder="Name" disabled>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="secondNameInput" placeholder="Second name" disabled>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" id="emailInput" placeholder="Email" disabled>
-          </div>
-          <div class="form-group">
-            <input type="tel" class="form-control" id="telInput" placeholder="Phone number" disabled>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="3" placeholder="Your message" disabled></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" disabled>Submit</button>
-        </form>
+      </div>
+      <div class="mx-auto mt-5">
+        <h2 id="portfolio" class="text-muted">#portfolio</h2>
+        <div class="portfolio">
+          <p class=" h4 mx-auto mt-0 mb-3 px-0">You can find my portfolio as a web developer here. Currently I work in financial sphere. Also have personal and side projects. Mainly it's front-end. But I'm slightly moving toward the <span class=" badge-secondary">back-end</span> side. I have projectlead and marketing background as well. I live in Moscow now. I'm open to new offers.</p>
+          <p class="h4 m-0 p-0">
+            <ion-icon name="logo-github"></ion-icon> <a href="https://github.com/onebadger">github.com</a>
+          </p>
+          <p class="h4 m-0 p-0">
+            <ion-icon name="school"></ion-icon> <a href="https://teamtreehouse.com/yakovbarsukov">teamtreehouse.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="mx-auto mt-5">
+        <h2 id="callback" class="text-muted">#callback</h2>
+        <div>
+          <p class="h4 mx-auto mb-3">Leave your contacts and message me here, I'll get in touch with you soon.</p>
+          <form action="send.php" method="post" class="needs-validation col-sm-7 col-md-5 mx-auto m-0 mt-lg-5 p-0" novalidate>
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="firstNameInput" aria-describedby="firstName" placeholder="Name" name="user_first_name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="secondNameInput" aria-describedby="secondName" placeholder="Second name" name="user_second_name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="emailInput" aria-describedby="email" placeholder="Email" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+              <div class="invalid-feedback">wrong e-mail address
+              </div>
+            </div>
+            <div class="form-group">
+              <input required type="tel" class="form-control" id="telInput" aria-describedby="phone" placeholder="Phone number" name="user_phone" pattern="^\+?\d{9,11}">
+              <div class="invalid-feedback">
+                wrong phone number
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="textArea" aria-describedby="message" rows="3" placeholder="Your message" name="user_comment"></textarea>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" checked required>
+              <label class="form-check-label" for="exampleCheck1">I agree to the <a href="privacy_policy.pdf" target="_blank">privacy policy</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-  <footer class="pt-5 pb-3">
+  <footer class="pt-5 pb-3" style="height: 134px">
     <div class="container footer">
       <div>Jakov Barsukov</div>
       <div>
-        <a href="https://github.com/onebadger" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-        <a href="https://twitter.com/yakov_barsukov" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
-        <a href="https://www.facebook.com/yakov.barsukov" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://github.com/onebadger" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://twitter.com/yakov_barsukov" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/yakov.barsukov" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
       </div>
     </div>
   </footer>
@@ -81,5 +113,29 @@
     $(document).ready(function() {
       $('.form-group:nth-child(2)').css('display', 'none');
     });
+
   </script>
-</body></html>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+  </script>
+</body>
+
+</html>
