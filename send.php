@@ -46,7 +46,7 @@ if(isset($_POST['user_phone']) && empty($_POST['user_second_name'])) {
       <h2 id="callback" class="text-muted">#callback</h2>
       <div>
         <p class="h4 mx-auto mb-3">Thanks! The form has been sent.</p>
-        <p class="h4 mx-auto mt-5"><a href="index.html">back</a></p>
+        <p class="h4 mx-auto mt-5"><a href="https://www.badger.one">back</a></p>
 
       </div>
     </div>
